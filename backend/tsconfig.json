@@ -12,8 +12,8 @@
     "resolveJsonModule": true,
     "noImplicitAny": true,
     "moduleResolution": "node",
-    "isolatedModules": true,
-    "allowJs": true
+    // "isolatedModules": true,
+    // "allowJs": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
