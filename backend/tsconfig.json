@@ -12,6 +12,7 @@
     "resolveJsonModule": true,
     "noImplicitAny": true,
     "moduleResolution": "node",
+    "types": ["node"],
     // "isolatedModules": true,
     // "allowJs": true
   },
