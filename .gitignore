@@ -1,0 +1,18 @@
+# Node dependencies (anywhere)
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+
+# Vite-specific
+.vite/
+
+# OS-specific
+.DS_Store
+Thumbs.db

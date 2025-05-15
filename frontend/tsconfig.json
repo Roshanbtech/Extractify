@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",          // Use ES2020 for wider compatibility
+    "module": "ESNext",          // Keep ESNext for Vite's module handling
+    "jsx": "react-jsx",          // Correct for React 18+
+    "strict": true,              // Maintain strict type checks
+    "moduleResolution": "bundler", // Required for Vite
+    "esModuleInterop": true,     // Needed for React/PDF.js imports
+    "allowSyntheticDefaultImports": true, // For compatibility with ES modules
+    "skipLibCheck": true,        // Improve build performance
+    "forceConsistentCasingInFileNames": true, // Avoid case sensitivity issues
+    "isolatedModules": true,     // Required for React Fast Refresh
+    "resolveJsonModule": true,   // Allow importing JSON files
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], // Add missing DOM libraries
+    "noEmit": true               // Let Vite handle output
+  },
+  "include": ["src", "src/global.d.ts"],
+  "exclude": ["node_modules"]
+}
