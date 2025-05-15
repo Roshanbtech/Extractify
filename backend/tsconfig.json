@@ -1,23 +1,18 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "CommonJS",
-    "moduleResolution": "node",
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "noImplicitAny": true,
-    "lib": ["ESNext", "DOM", "ES2017"],
-    "diagnostics": true,
-    "traceResolution": true,
-    "types": ["node"],
-    "typeRoots": ["node_modules/@types"]
-  },
+  "target": "ESNext",
+  "module": "CommonJS",
+  "moduleResolution": "node",
+  "outDir": "./dist",
+  "rootDir": "./src",
+  "lib": ["ESNext", "DOM", "ES2020"],
+  "types": ["node"],
+  "typeRoots": ["./node_modules/@types"],
+  "skipLibCheck": true,
+  "strict": true,
+  "resolveJsonModule": true,
+  "forceConsistentCasingInFileNames": true
+},
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
 }
