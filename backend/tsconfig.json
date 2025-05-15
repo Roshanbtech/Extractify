@@ -12,11 +12,11 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "noImplicitAny": true,
-    "lib": ["ESNext", "DOM"],
+    "lib": ["ESNext", "DOM", "ES2017"],
     "diagnostics": true,
     "traceResolution": true,
     "types": ["node"],
-    "typeRoots": ["./node_modules/@types"]
+    "typeRoots": ["node_modules/@types"]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
