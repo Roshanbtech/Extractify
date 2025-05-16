@@ -6,7 +6,7 @@
       "headers": [{ "key": "Content-Type", "value": "application/javascript" }]
     }
   ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
