@@ -44,6 +44,11 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  res.send("Backend is running!");
+});
+
+
 console.log('Allowed CORS Origin:', process.env.FRONTEND_URL);
 
 const corsOptions = {
