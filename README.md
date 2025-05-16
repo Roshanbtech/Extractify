@@ -126,5 +126,5 @@ npm run dev
 
 ## 📄 License
 
-MIT • [Roshan](https://github.com/Roshanbtech)
+MIT • [Roshanbtech](https://github.com/Roshanbtech)
 
