@@ -84,9 +84,11 @@ npm run dev
 ### PDF Operations
 
 * `POST /api/pdf/upload` – Upload a PDF (`multipart/form-data`, key `pdf`)
-* `GET  /api/pdf` – List all PDFs for user
+* `GET  /api/pdf/list` – List all PDFs for user
 * `GET  /api/pdf/access/:publicId` – Get signed URL
 * `POST /api/pdf/extract` – Extract & create new PDF
+* `DELETE /api/pdf/delete` - Delete PDF
+* `GET /api/pdf/download` - Download PDF
 
 > **Auth:** Send `Authorization: Bearer <token>` header or cookie `accessToken`
 
@@ -124,5 +126,5 @@ npm run dev
 
 ## 📄 License
 
-MIT • [Roshanbtech](https://github.com/Roshanbtech)
+MIT • [Roshan](https://github.com/Roshanbtech)
 
