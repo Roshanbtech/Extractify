@@ -1,26 +1,24 @@
-
-````markdown
 <p align="center">
-  <img src="https://fonts.gstatic.com/s/atomicage/v7/xMQKu8qZ1UZR-NjT4z0utw.woff2" alt="Atomic Age font" style="display:none;" />
+  <img src="https://img.shields.io/badge/Extractify-PDF%20Page%20Extractor-blue" alt="Extractify Logo">
 </p>
 
 <div align="center">
-  <h1>📑 Extractify</h1>
-  <p>PDF Page Extractor Application</p>
-  <a href="https://extractify-91.vercel.app">
-    <img src="https://img.shields.io/badge/Frontend-Live-blue.svg" alt="Frontend Live">
-  </a>
-  <a href="https://extractify-server.vercel.app">
-    <img src="https://img.shields.io/badge/API-Live-green.svg" alt="API Live">
-  </a>
+
+# 📑 Extractify
+
+_PDF Page Extractor Application_
+
+[![Frontend Live](https://img.shields.io/badge/Frontend-Live-blue.svg)](https://extractify-91.vercel.app)  
+[![API Live](https://img.shields.io/badge/API-Live-green.svg)](https://extractify-server.vercel.app)
+
 </div>
 
 ---
 
 ## 🔗 Live Demo
 
-- **Frontend:** [https://extractify-91.vercel.app](https://extractify-91.vercel.app)  
-- **Backend API:** [https://extractify-server.vercel.app](https://extractify-server.vercel.app)
+- **Frontend:** [extractify-91.vercel.app](https://extractify-91.vercel.app)  
+- **Backend API:** [extractify-server.vercel.app](https://extractify-server.vercel.app)
 
 ---
 
@@ -40,7 +38,7 @@
 ```bash
 git clone https://github.com/Roshanbtech/Extractify.git
 cd Extractify
-````
+```
 
 ### Backend
 
@@ -128,9 +126,3 @@ npm run dev
 
 MIT • [Roshanbtech](https://github.com/Roshanbtech)
 
-```
-
----
-  
-
-```
