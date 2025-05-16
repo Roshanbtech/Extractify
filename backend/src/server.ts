@@ -47,7 +47,7 @@ app.use(
 console.log('Allowed CORS Origin:', process.env.FRONTEND_URL);
 
 const corsOptions = {
-  origin: process.env.FRONTEND_URL,
+  origin: process.env.FRONTEND_URL ||"https://extractify-91.vercel.app" ,
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
   allowedHeaders: [
