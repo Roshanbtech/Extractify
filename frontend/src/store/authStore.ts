@@ -34,7 +34,9 @@ export const useAuthStore = create<AuthState>((set) => ({
     } catch {}
   },
   logout: () => {
+    localStorage.removeItem("accessToken");
     axios.post("/auth/logout");
     set({ user: null });
+    toast.success("Logged out successfully.");
   },
 }));
