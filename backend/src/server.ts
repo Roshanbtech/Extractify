@@ -66,7 +66,6 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.options("*", cors(corsOptions));
 
 app.use("/api/auth", authRoutes);
 app.use("/api/pdf", authenticate, pdfRoutes); 
