@@ -1,126 +1,130 @@
+<p align="center">
+  <img src="https://img.shields.io/badge/Extractify-PDF%20Page%20Extractor-blue" alt="Extractify Logo">
+</p>
+
 <div align="center">
-  <h1>📑 <strong>Extractify</strong></h1>
-  <p>PDF Page Extractor Application</p>
-  <a href="https://extractify-91.vercel.app">
-    ![Frontend Live](https://img.shields.io/badge/Frontend-Live-blue?style=flat-square&logo=file-pdf)
-  </a>
-  <a href="https://extractify-server.vercel.app">
-    ![API Live](https://img.shields.io/badge/API-Live-green?style=flat-square&logo=file-pdf)
-  </a>
+
+# 📑 Extractify
+
+_PDF Page Extractor Application_
+
+[![Frontend Live](https://img.shields.io/badge/Frontend-Live-blue.svg)](https://extractify-91.vercel.app)  
+[![API Live](https://img.shields.io/badge/API-Live-green.svg)](https://extractify-server.vercel.app)
+
 </div>
 
 ---
 
- 🔗 Live Demo
+## 🔗 Live Demo
 
-* Frontend: [https://extractify-91.vercel.app](https://extractify-91.vercel.app)
-* Backend API: [https://extractify-server.vercel.app](https://extractify-server.vercel.app)
-
----
-
- 🎯 Overview
-
-Extractify lets authenticated users:
-
-1. Upload secure PDFs
-2. View a gallery of uploaded documents
-3. Select & extract specific pages (supports reordering)
-4. Download a newly generated PDF
-5. Delete unwanted PDF
-
-Built with a clean, SOLID‑driven architecture for maintainability and scalability.
+- **Frontend:** [extractify-91.vercel.app](https://extractify-91.vercel.app)  
+- **Backend API:** [extractify-server.vercel.app](https://extractify-server.vercel.app)
 
 ---
 
- 🔧 Quick Start
+## 🧐 Overview
 
-1. Clone
+- Upload secure PDFs  
+- View all pages of an uploaded PDF  
+- Select and reorder pages before extraction  
+- Download a newly generated PDF  
+- Delete unwanted PDFs  
+- Authenticated user management for document storage  
 
-   ```bash
+---
 
-git clone [https://github.com/Roshanbtech/Extractify.git](https://github.com/Roshanbtech/Extractify.git)
+## 🚀 Quick Start
+
+```bash
+git clone https://github.com/Roshanbtech/Extractify.git
 cd Extractify
+```
 
-````
-2. Backend
+### Backend
 
-   ```bash
+```bash
 cd backend
 cp .env.example .env
-# fill your MONGO_URL, JWT_SECRET, CLOUDINARY_* values
 npm install
 npm run dev
-````
+```
 
-3. Frontend
+### Frontend
 
-   ```bash
-
-cd ../frontend
+```bash
+cd frontend
 npm install
 npm run dev
+```
 
-````
-
-Access the app on `http://localhost:5173`.
-
----
-
- ⚙️ Architecture & Tech
-- Frontend: React + Vite + TypeScript + Zustand + TailwindCSS
-- Backend: Express + TypeScript + MongoDB (Mongoose)
-- Storage: Cloudinary (raw, authenticated)
-- PDF Processing: pdf-lib
-- Auth: JWT & bcrypt
-- Logging & Security: Morgan, Helmet, CORS
-- Pattern: Clean/Hexagonal (Domain → Use Cases → Adapters)
+*Open your browser at `http://localhost:5173`*
 
 ---
 
- 📡 API Endpoints
-All routes prefixed with `/api`
+## 🏗 Architecture & Tech Stack
 
-### Auth
-- `POST /auth/register` → Sign up new user
-- `POST /auth/login` → Get JWT
-- `POST /auth/logout` → Clear session
-
-### PDFs
-- `POST /pdf/upload` → **multipart/form-data** body field `pdf`
-- `GET  /pdf` → List current user’s documents
-- `GET  /pdf/access/:publicId` → Returns signed URL
-- `POST /pdf/extract` → JSON `{ publicId, pages: number[], order?: number[] }`
-
-Authorization: send `Authorization: Bearer <token>` header or cookie `accessToken`.
+**Frontend:** React · Vite · TypeScript · Zustand · TailwindCSS
+**Backend:** Express · TypeScript · MongoDB (Mongoose)
+**Storage:** Cloudinary (authenticated)
+**PDF Processing:** pdf-lib
+**Auth:** JWT · bcrypt
+**Security & Logging:** Morgan · Helmet · CORS
+**Architecture:** Clean / Hexagonal (Domain → Use Cases → Adapters)
 
 ---
 
- 🛠️ Testing
-Use Insomnia or Postman:
-1. Login to retrieve JWT
-2. Upload a PDF (`multipart/form-data`, key `pdf`)
-3. List, access, and extract via corresponding endpoints
+## 🔌 API Endpoints
 
-Example extract body:
+### Authentication
+
+* `POST /api/auth/register` – User registration
+* `POST /api/auth/login` – Returns JWT
+* `POST /api/auth/logout` – Clears user session
+
+### PDF Operations
+
+* `POST /api/pdf/upload` – Upload a PDF (`multipart/form-data`, key `pdf`)
+* `GET  /api/pdf/list` – List all PDFs for user
+* `GET  /api/pdf/access/:publicId` – Get signed URL
+* `POST /api/pdf/extract` – Extract & create new PDF
+* `DELETE /api/pdf/delete` - Delete PDF
+* `GET /api/pdf/download` - Download PDF
+
+> **Auth:** Send `Authorization: Bearer <token>` header or cookie `accessToken`
+
+---
+
+## 📸 Screenshots
+
+| Signup                                | Login                                        |
+| ------------------------------------- | -------------------------------------------- |
+| ![Signup](./screenshots/signup.jpg)   | ![Login](./screenshots/login.jpg)            |
+| Home                                  | Upload                                       |
+| ![Home](./screenshots/home.jpg)       | ![Upload](./screenshots/upload.jpg)          |
+| Preview                               | Page Select                                  |
+| ![Preview](./screenshots/preview.jpg) | ![Page Select](./screenshots/pageselect.jpg) |
+| Extraction Result                     | Uploads                                      |
+| ![Extract](./screenshots/extract.jpg) | ![Uploads](./screenshots/uploads.jpg)        |
+
+---
+
+## 🧪 Testing
+
+1. **Login** to get JWT
+2. **Upload** a PDF (`multipart/form-data`, key `pdf`)
+3. **Extract pages** by POSTing JSON to `/api/pdf/extract`:
+
 ```json
 {
   "publicId": "pdfs/USER_ID/original/my.pdf",
-  "pages": [1,3,5],
-  "order": [2,1,3]
+  "pages": [1, 3, 5],
+  "order": [2, 1, 3]
 }
-````
+```
 
 ---
 
- 🖼️ Adding Images
+## 📄 License
 
-   ```md
-   ![Upload Page](./screenshots/upload.png)
-   ![Page Selection](./screenshots/select.png)
-   ![Extraction Result](./screenshots/result.png)
-   ```
----
+MIT • [Roshanbtech](https://github.com/Roshanbtech)
 
-📜 License
-
-MIT • [Roshan](https://github.com/Roshanbtech)
