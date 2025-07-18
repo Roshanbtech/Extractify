@@ -76,7 +76,6 @@ export class AuthController {
   static async check(req: Request, res: Response, next: NextFunction) {
     try {
       const userId = req.user!.id;
-      // you might want to fetch fresh from DB so you get name/email
       const user = await userRepository.findByEmail(req.user!.email);
       if (!user) {
         res

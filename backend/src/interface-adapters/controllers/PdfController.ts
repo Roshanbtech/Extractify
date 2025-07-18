@@ -77,7 +77,7 @@ export class PdfController {
   static async delete(req: Request, res: Response, next: NextFunction) {
     try {
       const userId   = req.user!.id;
-      const publicId = req.body.publicId as string;    // ← from JSON body
+      const publicId = req.body.publicId as string;   
   
       if (!publicId) {
         throw new AppError("No publicId provided", HTTPStatusCodes.BAD_REQUEST);
@@ -129,11 +129,11 @@ export class PdfController {
   
       const usecase = new DownloadPdfFile(pdfRepo, userRepo);
       const signedUrl = await usecase.execute(userId, publicId);
-      console.log("🚀 Fetching PDF from Cloudinary:", signedUrl);
+      console.log("Fetching PDF from Cloudinary:", signedUrl);
   
       const upstream = await fetch(signedUrl);
       if (!upstream.ok) {
-        console.error("❌ Cloudinary Fetch Failed:", upstream.status);
+        console.error(" Cloudinary Fetch Failed:", upstream.status);
         res.status(500).json({ message: `Cloudinary fetch failed: ${upstream.status}` });
         return;
       }
