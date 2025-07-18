@@ -22,10 +22,13 @@ instance.interceptors.response.use(
   (err) => {
     const status = err.response?.status;
     if (status === 401) {
+      const hadToken = !!(localStorage.getItem("accessToken") || Cookies.get("accessToken"));
       useAuthStore.getState().logout();
       localStorage.removeItem("accessToken");
       Cookies.remove("accessToken");
-      toast.error("Session expired. Please login again.");
+      if (hadToken) {
+        toast.error("Session expired. Please login again.");
+      }
       window.location.href = "/login";
     } else {
       const msg = err.response?.data?.message || "Something went wrong";
@@ -34,4 +37,5 @@ instance.interceptors.response.use(
     return Promise.reject(err);
   }
 );
+
 export default instance;
