@@ -96,15 +96,39 @@ npm run dev
 
 ## 📸 Screenshots
 
-| Signup                                | Login                                        |
-| ------------------------------------- | -------------------------------------------- |
-| ![Signup](./screenshots/signup.jpg)   | ![Login](./screenshots/login.jpg)            |
-| Home                                  | Upload                                       |
-| ![Home](./screenshots/home.jpg)       | ![Upload](./screenshots/upload.jpg)          |
-| Preview                               | Page Select                                  |
-| ![Preview](./screenshots/preview.jpg) | ![Page Select](./screenshots/pageselect.jpg) |
-| Extraction Result                     | Uploads                                      |
-| ![Extract](./screenshots/extract.jpg) | ![Uploads](./screenshots/uploads.jpg)        |
+### 🔐 Authentication
+<p align="center">
+  <img src="./screenshots/signup.jpg" width="420" />
+  &nbsp;&nbsp;
+  <img src="./screenshots/login.jpg" width="420" />
+</p>
+
+---
+
+### 🏠 Home & Upload
+<p align="center">
+  <img src="./screenshots/home.jpg" width="420" />
+  &nbsp;&nbsp;
+  <img src="./screenshots/upload.jpg" width="420" />
+</p>
+
+---
+
+### 📄 Preview & Page Selection
+<p align="center">
+  <img src="./screenshots/preview.jpg" width="420" />
+  &nbsp;&nbsp;
+  <img src="./screenshots/pageselect.jpg" width="420" />
+</p>
+
+---
+
+### 📥 Extraction Result & Uploads
+<p align="center">
+  <img src="./screenshots/extract.jpg" width="420" />
+  &nbsp;&nbsp;
+  <img src="./screenshots/uploads.jpg" width="420" />
+</p>
 
 ---
 
